@@ -13,7 +13,8 @@ const arr2Capital = arr => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             try {
-                const capitalizedArr = arr.map(string => string.toUpperCase());
+                // const capitalizedArr = arr.map(string => string.toLocaleUpperCase());
+                const capitalizedArr = arr.map(string => string.toUpperCase()); // ugyanaz
                 resolve(capitalizedArr);
             }
             catch (err) {
@@ -23,7 +24,7 @@ const arr2Capital = arr => {
     })
 };
 
-arr2Capital(['a', 'b', 'c2', 'true'])
+arr2Capital(['a', 'b', 'Söjtör', 'Gánt', 'c2', 'true', 'Újpalota', 'Tétény', 'bűr', 'szőr'])
     .then(
         (arr) => console.log(arr),
         (err) => console.error(err)
